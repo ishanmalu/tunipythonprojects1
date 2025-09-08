@@ -4,23 +4,37 @@ Creator: Ishan Malu
 Student id number: 154138420
 """
 
-def print_verse(x,y):
+def print_verse(animal, sound):
     """
-    This is the function which prints the song
-    :param x: the names of the animals
-    :param y: what sounds the animals make
+    Prints one verse of the song 'Old MACDONALD had a farm'.
+
+    :param animal: Name of the animal (string)
+    :param sound: Sound the animal makes (string)
     """
-    print("Old MACDONALD had a farm\nE-I-E-I-O\nAnd on his farm he had a ", x,"\nE-I-E-I-O", sep="")
-    print("With a" , y,y,"here\nAnd a",y,y,"there")
-    print("Here a ", y,", there a ", y,"\nEverywhere a ", y," ", y, sep="")
-    print("Old MacDonald had a farm\nE-I-E-I-O")
+    print("Old MACDONALD had a farm")
+    print("E-I-E-I-O")
+    print(f"And on his farm he had a {animal}")
+    print("E-I-E-I-O")
+    print(f"With a {sound} {sound} here")
+    print(f"And a {sound} {sound} there")
+    print(f"Here a {sound}, there a {sound}")
+    print(f"Everywhere a {sound} {sound}")
+    print("Old MacDonald had a farm")
+    print("E-I-E-I-O")
+
 
 def main():
-    print_verse("cow", "moo")
-    print_verse("pig", "oink")
-    print_verse("duck", "quack")
-    print_verse("horse", "neigh")
-    print_verse("lamb", "baa")
+    animals = [("cow", "moo"),
+               ("pig", "oink"),
+               ("duck", "quack"),
+               ("horse", "neigh"),
+               ("lamb", "baa")]
+
+    for i, (animal, sound) in enumerate(animals):
+        print_verse(animal, sound)
+        if i < len(animals) - 1:
+            print()
+
 
 if __name__ == "__main__":
     main()
