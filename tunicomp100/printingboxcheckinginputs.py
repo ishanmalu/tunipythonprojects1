@@ -4,6 +4,7 @@ Creator: Ishan Malu
 Student id number: 154138420
 """
 
+
 def read_input(prompt):
     """
     Asks the user to enter a positive integer.
